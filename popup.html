@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Youtube Transcript Summarizer</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            width: max-content;
+            max-width: 800px;
+        }
+        button{
+            background-color: red;
+            color: white;
+            border-radius: 8px;
+            width:max-content;
+            height:max-content;
+            padding: 10px;
+            font-size: large;
+            margin: auto;
+            display: block;
+            border-color: coral;
+        }
+        button[disabled]{
+            background-color: lightcoral;
+            color: azure;
+            border-radius: 8px;
+            width: max-content;
+            padding: 10px;
+            font-size: large;
+            margin:auto;
+            display:block;
+            border-color:lightsalmon;
+        }
+        p{
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <h1>Youtube Transcript Summarizer</h1>
+    <button id="summarise" type="button">Summarize</button>
+    <br/>
+    <p id="output"></p>
+    <script src="popup.js"></script>
+
+</body>
+</html>
