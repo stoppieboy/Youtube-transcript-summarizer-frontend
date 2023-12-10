@@ -119,6 +119,8 @@ import axios from 'axios';
   //   axios.get(`http://locahost:5000/get_transcript/${video_id}`);
   // });
   async function getTranscript() {
+    document.getElementById('summarizeBtn').style = "display: none";
+    document.getElementById('loading').style['display'] = 'inline';
     let queryOptions = { active: true, lastFocusedWindow: true};
     let [tab] = await chrome.tabs.query(queryOptions);
     const query_string = /^[^#?]*(\?[^#]+|)/.exec(tab.url)[1];
@@ -128,8 +130,11 @@ import axios from 'axios';
     console.log("transcript recieved:",data);
     document.getElementById('transcript').innerHTML = data;
     localStorage.setItem("tabName",tab);
+    document.getElementById('loading').style = "display:none";
+    // document.getElementById('summarize').style['display'] = 'none';
     return tab;
   }
-  
-  getTranscript().then((data) => console.log("Tab data",data)).catch(err=>console.log(err));
+  document.getElementById('summarizeBtn').addEventListener("click", () => {
+    getTranscript().then((data) => console.log("Tab data",data)).catch(err=>console.log(err));
+  })
 })();

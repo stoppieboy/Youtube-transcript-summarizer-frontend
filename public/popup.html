@@ -4,28 +4,62 @@
     <meta charset="UTF-8">
     <title>My Chrome Extension</title>
     <link rel="stylesheet" href="popup.css" />
+    <!-- <style>
+      h1{
+          text-align: center;
+      }
+      body{
+          /* width: max-content; */
+          min-width: 600px;
+          min-height: 600px;
+          max-width: 800px;
+      }
+      button{
+          background-color: red;
+          color: white;
+          border-radius: 8px;
+          width:max-content;
+          height:max-content;
+          padding: 10px;
+          font-size: large;
+          margin: auto;
+          display: block;
+          border-color: coral;
+      }
+      button[disabled]{
+          background-color: lightcoral;
+          color: azure;
+          border-radius: 8px;
+          width: max-content;
+          padding: 10px;
+          font-size: large;
+          margin:auto;
+          display:block;
+          border-color:lightsalmon;
+      }
+      p{
+          font-size: medium;
+      }
+  </style> -->
 </head>
 <body>
 
+
+  <!-- Ayushi's lkasjdlfjls -->
+  <!-- <h1>Youtube Transcript Summarizer</h1>
+  <button id="summarise" type="button">Summarize</button>
+  <br/>
+  <p id="output"></p>
+  <script src="popup.js"></script> -->
+
+
+  
   <div class="app">
-    <p class="conter-label">Transcript Summarizer</p>
+    <p class="counter-label"><h1>Transcript Summarizer</h1></p>
     <div id="transcript"></div>
-    <button class="button" id="summarizeBtn">Summarize</button>
+    <button id="loading">Loading...</button>
+    <button onclick="" class="button" id="summarizeBtn">Summarize</button>
   </div>
-
-  <!-- <div class="app">
-    <p class="counter-label">Counter</p>
-    <div id="counter" class="counter"></div>
-    <div class="button-container">
-      <button id="decrementBtn" class="button">-</button>
-      <button id="incrementBtn" class="button">+</button>
-    </div>
-
-    <hr class="divider" />
-
-    <p class="title">Chrome Extension is Ready!</p>
-    <p class="subtitle">Start by updating <code>popup.html</code></p>
-  </div> -->
 
   <script src="popup.js"></script>
 
@@ -37,3 +71,5 @@
   -->
 </body>
 </html>
+
+
